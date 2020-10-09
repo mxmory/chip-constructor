@@ -1,0 +1,145 @@
+.header {
+  
+  &__top {
+    height: 96px;
+    background-color: #fff;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+    .wrapper {
+      height: 100%;
+    }
+  }
+
+  &__logo {
+    width: 215px;
+
+    @media (max-width: 992px) {
+      display: none;
+
+      &.mobile {
+        width: 150px;
+      }
+    }
+  }
+
+  &__nav {
+    height: 76px;
+    background-color: var(--black);
+    color: #fff;
+    
+    @media (max-width: 992px) {
+      height: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #fff;
+    }
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      @media (max-width: 992px) {
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .navbar {
+        margin-left: auto;
+        text-transform: uppercase;
+        padding: 0;
+
+        @media (max-width: 992px) {
+          width: 100%;
+        }
+
+        .link.nav-link {
+          padding: 7px 18px;
+          border-radius: 8px;
+          color: #fff;
+
+          &.active {
+            color: inherit;
+
+            @media (max-width: 992px) {
+              color: var(--black);
+            }
+          }
+
+          @media (max-width: 992px) {
+            color: var(--black);
+          }
+
+          &:hover {
+            color: var(--orange)
+          }
+
+          &.current {
+            border: 1px solid #fff;
+          }
+
+          &:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          margin-left: 0;
+        }
+      }
+
+      .navbar-collapse {
+
+        @media (max-width: 992px) {
+
+        }
+      }
+
+      .navbar-brand {
+        display: none;
+
+        @media (max-width: 992px) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__funcs {
+    display: flex;
+    margin-left: auto;
+
+    @media (max-width: 992px) {
+      display: none;
+
+      &.mobile {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        margin: 15px 0;
+      }
+    }
+
+    .func {
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:not(:last-child) {
+        padding-right: 10px;
+        margin-right: 10px;
+        border-right: 1px solid var(--orange);
+
+        @media (max-width: 992px) {
+          border: none;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

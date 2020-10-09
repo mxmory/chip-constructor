@@ -1,0 +1,141 @@
+.footer {
+  background-color: var(--black);
+  color: #fff;
+
+  &__top {
+    height: 360px;
+    padding-top: 100px;
+
+    @media (max-width: 992px) {
+      padding: 25px 0;
+      height: auto;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    &-inner {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 992px) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    height: 140px;
+    border-top: 2px solid var(--gray);
+    font-size: 12px;
+
+    @media (max-width: 992px) {
+      height: auto;
+    }
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 30px;
+      position: relative;
+
+      @media (max-width: 992px) {
+        padding: 25px 0;
+      }
+
+      @media (max-width: 375px) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    }
+
+    .copyright {
+      text-align: left;
+      flex: 1;
+    }
+
+    .social {
+      .link {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+
+      &--links {
+        text-align: right;
+        flex: 1;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 375px) {
+        margin-bottom: 25px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__col {
+    max-width: 340px;
+    padding-right: 60px;
+
+    @media (max-width: 992px) {
+      padding-right: 30px;
+    }
+
+    &:last-child {
+      margin-left: auto;
+
+      @media (max-width: 992px) {
+        padding-right: 0;
+      }
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .cont {
+      color: var(--gray);
+    }
+
+    p, ul, li {
+      line-height: 1.5em;
+    }
+
+    .payments {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      img {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .btn-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: calc(100% - 15px);
+    width: 31px;
+    height: 31px;
+    background-color: var(--orange);
+    transition: .3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}

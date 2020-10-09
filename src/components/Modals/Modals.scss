@@ -1,0 +1,16 @@
+.modal-content {
+  border: none !important;
+}
+
+.modal-header {
+  background-color: var(--orange);
+  color: #fff;
+
+  .close {
+    color: #fff;
+  }
+}
+
+.modal-body {
+  background-color: var(--bg);
+}

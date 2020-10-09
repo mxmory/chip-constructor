@@ -1,0 +1,47 @@
+.title-сontainer {
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  margin-bottom: 57px;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  @media (max-width: 992px) {
+    height: 60px;
+    margin-bottom: 30px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../../assets/img/main-bg.png') no-repeat fixed center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.4);
+  }
+
+  .brackets {
+    padding: 5px 30px;
+    background-image: linear-gradient(var(--gray), var(--gray)),
+    linear-gradient(var(--gray), var(--gray)),
+    linear-gradient(var(--gray), var(--gray)),
+    linear-gradient(var(--gray), var(--gray));
+    background-repeat: no-repeat;
+    background-size: 15px 2px;
+    background-position: top left, top right, bottom left, bottom right;
+
+    border: solid var(--gray);
+    text-align: justify;
+    border-width: 0 2px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+  }
+}
